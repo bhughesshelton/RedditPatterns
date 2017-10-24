@@ -13,7 +13,7 @@ foreach my $package (@packages) {
 		my $yn = <STDIN>;
 		chomp $yn;
 		$yn = lc $yn;
-		if ($yn == "y"){
+		if ($yn eq "y"){
 			my @args = ("perl", "-MCPAN", "-e", "install $package");
 			system @args;
 		} else {die "Suit yourself. You need to install $package. Thus, I die."};
